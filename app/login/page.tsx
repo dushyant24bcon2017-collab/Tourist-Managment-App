@@ -38,7 +38,7 @@ try {
 }
 }
   return (
-    <div className="flex justify-center items-center h-screen"> 
+    <div className="flex justify-center items-center h-screen px-4"> 
     <Card className="w-full max-w-sm ">
       <CardHeader>
         <CardTitle>Login to your account</CardTitle>

@@ -187,7 +187,7 @@ export default function MainChat({ existingTripId }: MainChatProps) {
       tripId: currentTripId 
     },
     onError: (error) => {
-      console.error("🚨 2. SDK KE ANDAR ERROR AAYA:", error);
+      console.error(". SDK KE ANDAR ERROR AAYA:", error);
       alert("SDK error: " + error.message);
     },
     
@@ -239,7 +239,7 @@ export default function MainChat({ existingTripId }: MainChatProps) {
     // Pura screen 2 hisso mein divide kiya hai: Left (Chat) aur Right (Itinerary)
     <div className="flex w-full h-screen overflow-hidden bg-white">
       
-      {/* 🟢 LEFT SIDE: TERA CHAT SECTION */}
+      {/* CHAT SECTION*/}
       <div className="flex-1 flex flex-col h-full border-r">
         <div className="flex flex-col h-full w-full max-w-3xl mx-auto relative pt-4">
           
@@ -310,12 +310,12 @@ export default function MainChat({ existingTripId }: MainChatProps) {
         </div>
       </div>
 
-      {/* 🔴 RIGHT SIDE: TERA LIVE ITINERARY PANEL */}
+  
       <div className="w-[450px] hidden lg:block bg-gray-50 h-full">
         <Itennarary 
-          // 🚨 LIVE DATA YAHAN PASS HO RAHA HAI
+          // LIVE DATA YAHAN PASS HO RAHA HAI
           data={liveItineraryData ? { 
-            destination: "Your Custom Trip", // Tu baad mein API se city name nikaal ke yahan daal sakta hai
+            destination: "Your Custom Trip", 
             itinerary: liveItineraryData.itinerary 
           } : null} 
         />
