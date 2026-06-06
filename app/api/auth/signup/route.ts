@@ -46,7 +46,11 @@ export const  POST = async(req:NextRequest )=>{
             email:user.email
         }},{status:200})
     } catch (error) {
-        return NextResponse.json({error:"Server Error"},{status:500})
+       console.log("ASLI ERROR YAHAN HAI:", error); // Vercel logs ke liye
+  
+  return NextResponse.json(
+    { error: (error as Error).message || "Kuch aur hi phata hai bhai" }, 
+    { status: 500 })
     }
 
 }
